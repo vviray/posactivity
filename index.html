@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen Order</title>
+</head>
+<body>
+    <h1>Welcome to the Canteen!</h1>
+    <h2>Prices are shown below. Click finalize order button once you're sure with your orders.</h2>
+    <ul>
+        <li>Burger - <span id="burger-price">₱60.00</span></li>
+        <li>Fries - <span id="fries-price">₱50.00</span></li>
+        <li>Fishball - <span id="fishball-price">₱20.00</span></li>
+        <li>Kikiam - <span id="kikiam-price">₱25.00</span></li>
+    </ul>
+
+    <br>
+    <div id="choices-container">
+        <div class="choice">
+            <h4>Choice</h4>
+            <select name="food" class="food">
+                <option></option>
+                <option value="burger">Burger</option>
+                <option value="fries">Fries</option>
+                <option value="fishball">Fishball</option>
+                <option value="kikiam">Kikiam</option>
+            </select>
+            <h4>Quantity</h4>
+            <input type="number" class="quantity" value="0">
+        </div>
+    </div>
+            
+    <button onclick="finalize()" id="finalize">Finalize Your Order</button>
+    <button type="button" onclick="duplicate()">Add new item</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
